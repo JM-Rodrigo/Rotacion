@@ -44,7 +44,7 @@
     {
         echo "<tr aling=\"center\"><td><b>$i</b></td>";
         for($j=0; $j<$columnasA; $j++)
-           echo '<td>&nbsp;&nbsp;' . $a[$i][$j] . '&nbsp;&nbsp;</td>';
+		    echo'<td><input name="a[' . $i . '][' . $j . ']" value= '.$a[$i][$j].' type="text" size="4"></td>';
             echo '</tr>'; 
     }
 

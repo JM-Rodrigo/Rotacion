@@ -103,7 +103,7 @@
         </form>
         <br>
     <?php
-        #if (isset ($_POST['b']))
+        
         if (isset ($_POST['a']) && isset ($_POST['b']))
         {
             $a=$_POST['a'];

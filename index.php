@@ -21,7 +21,7 @@
   <section class="datos">
     <div class="card">
       <div>
-        <form action="rotacion.php" method='POST' class="Entradas">
+        <form action="index.php" method='POST' class="Entradas">
           <input type="number" name="lados" id="lados" placeholder="Lados" />
           <input type="submit" name="btn1" id="button1" class="btn-material" placeholder="Enviar" />
         </form>
@@ -35,7 +35,7 @@
         }
         function operacion($lados)
         {
-          echo "<form action='operaciones.php' method='POST' class='Entradas'>";
+          echo "<form action='codigo.php' method='POST' class='Entradas'>";
           echo " <div>";
           for ($i = 0; $i < $lados; $i++) {
             echo " <input type='number' name='valorx", $i, "' id='numero' placeholder='x'>";

@@ -12,7 +12,7 @@
 <body>
     <header class="principal">
         <ul>
-            <li><a href="./rotacion.php">Rotación</a></li>
+            <li><a href="./Index.php">Rotación</a></li>
         </ul>
     </header>
     <section class="rotacion">
@@ -36,6 +36,7 @@
         }
         if (isset($_POST['angulo']) && isset($_POST['lados'])) {
             $angulo = $_POST['angulo'];       //angulo a rotar
+            $angulo = ($angulo* M_PI)/180;
             $coordenadasx = [];
             $coordenadasy = [];
             $relleno = [];
@@ -49,11 +50,7 @@
                 array_push($coordenadasy, $_POST["valory$i"]);
                 array_push($relleno, 1);
             }
-            $a = array(
-                array($cosenos, -$senos, 0),
-                array($senos, $cosenos, 0),
-                array(0, 0, 1)
-            );
+            $a = array([round(cos($angulo),1),round(-sin($angulo),1),0],[round(sin($angulo),1),round(cos($angulo),1),0],[0,0,1]);
             $b = array($coordenadasx, $coordenadasy, $relleno);
 
             $c = array();
@@ -72,7 +69,7 @@
                         for ($k = 0; $k < $filasB; $k++) {
                             $c[$i][$j]  += ($a[$i][$k] * $b[$k][$j]);
                         }
-                        $c[$i][$j] = round($c[$i][$j],2);
+                        // $c[$i][$j] = round($c[$i][$j];
                     }
                 }
                 mostrar_tabla($b[0],$b[1],"Original");

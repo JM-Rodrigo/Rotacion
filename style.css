@@ -94,7 +94,7 @@ td:empty {
 
 tr:hover:not(#firstrow),
 tr:hover td:empty {
-  background: #ff0;
+  background: rgb(187, 255, 0);
   pointer-events: visible;
 }
 tr:hover:not(#firstrow) {

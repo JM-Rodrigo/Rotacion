@@ -19,12 +19,12 @@
         <h1>Resultados</h1>
 
     </section>
-    
+    <section class='tabs'>
 
         <?php
         function mostrar_tabla($matriz1, $matriz2, $nombreTabla)
         {
-            echo "<section class='tabs'>";
+            echo "";
             echo "<table class='tablas'>";
             echo "<caption>$nombreTabla</caption>";
             echo "<tr class='table-head'><th>x</th><th>y</th></tr>";
